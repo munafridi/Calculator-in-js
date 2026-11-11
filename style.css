@@ -11,7 +11,8 @@ body { margin: 0; min-height: 100vh; color: var(--text); font-family: 'DM Sans',
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #a78bfa; box-shadow: 0 0 9px #a78bfa; }
 .display { min-height: 139px; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; padding: 15px 3px 23px; overflow: hidden; }
 .display-label { width: 100%; min-height: 20px; color: var(--muted); text-align: right; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.display-value { max-width: 100%; margin-top: 5px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(42px, 13vw, 58px); line-height: 1.12; font-weight: 500; letter-spacing: -2px; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+.display-value { width: 100%; max-width: 100%; margin-top: 5px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(42px, 13vw, 58px); line-height: 1.12; font-weight: 500; letter-spacing: -2px; white-space: nowrap; overflow-x: auto; overflow-y: hidden; text-overflow: clip; text-align: right; touch-action: pan-x; scrollbar-width: none; -ms-overflow-style: none; }
+.display-value::-webkit-scrollbar { display: none; }
 .keypad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; }
 .key { height: 66px; border: 1px solid rgba(255,255,255,.035); border-radius: 18px; color: #f0f1f7; background: rgba(255,255,255,.055); font: 600 21px 'DM Sans', sans-serif; cursor: pointer; user-select: none; transition: transform .12s ease, background .16s ease, border-color .16s ease, box-shadow .16s ease; -webkit-tap-highlight-color: transparent; }
 .key:hover { background: rgba(255,255,255,.105); border-color: rgba(255,255,255,.12); }

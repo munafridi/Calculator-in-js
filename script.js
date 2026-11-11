@@ -61,6 +61,7 @@ function updateDisplay() {
   const displayText = shownExpression();
   resultEl.textContent = displayText;
   resultEl.title = displayText;
+  resultEl.scrollLeft = resultEl.scrollWidth;
   expressionEl.textContent = '';
 
   if (!justEvaluated && /\d$/.test(expression) && /[+*/-]/.test(expression)) {
